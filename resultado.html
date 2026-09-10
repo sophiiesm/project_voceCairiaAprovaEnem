@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você Cairia? — Resultado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="result-page">
+
+    <main class="result-container">
+
+        <section class="reveal">
+            <span class="reveal-stamp">SIMULAÇÃO</span>
+
+            <h1>🚨 Você caiu em um golpe.</h1>
+
+            <p class="reveal-subtitle">
+                Calma! Esta foi uma simulação educativa de phishing.
+                Nenhuma informação digitada foi armazenada ou enviada.
+            </p>
+
+            <div class="project-info">
+                <strong>Projeto Você Cairia?</strong>
+                <span>Segurança da Informação • Professor: Felipe Balem</span>
+                <span>Sophie S. Michelon • Nikolas de Souza • Jhonatas Tavares</span>
+                <span>Leonardo Mello • Manoela de Deus • Isabelly Rodrigues</span>
+                <span>3º ano — Técnico em Informática • IFRO — <i>Campus</i> Ariquemes • 2026</span>
+            </div>
+        </section>
+
+        <section class="lesson-block highlight">
+            <span class="section-kicker">AGORA PRESTE ATENÇÃO</span>
+            <h2>Fique para aprender a nunca mais cair em um golpe digital.</h2>
+            <p>
+                O objetivo desta simulação é mostrar como uma oferta que parece
+                comum, útil e vantajosa pode influenciar uma decisão antes que
+                a pessoa pare para verificar.
+            </p>
+        </section>
+
+        <section class="lesson-block">
+            <div class="section-kicker">🎣 EM 15 SEGUNDOS</div>
+            <h2>O que é phishing?</h2>
+            <p>
+                Phishing é uma forma de golpe que usa mensagens, páginas ou
+                ofertas falsas para convencer alguém a realizar uma ação ou
+                fornecer informações. A armadilha funciona quando a oferta
+                parece confiável o suficiente para a pessoa seguir em frente.
+            </p>
+        </section>
+
+        <section class="lesson-block">
+            <div class="section-kicker">🔎 OLHE DE NOVO</div>
+            <h2>O que você deveria ter percebido?</h2>
+
+            <div class="evidence-list">
+                <article class="evidence">
+                    <span>01</span>
+                    <div>
+                        <h3>A gratuidade da oferta</h3>
+                        <p>
+                            A promessa de um preparatório gratuito foi usada
+                            como vantagem para despertar interesse.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="evidence">
+                    <span>02</span>
+                    <div>
+                        <h3>A familiaridade com o contexto</h3>
+                        <p>
+                            Cursos, materiais e simulados para o ENEM são ofertas
+                            comuns no cotidiano de estudantes, tornando a situação
+                            mais fácil de aceitar.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="evidence">
+                    <span>03</span>
+                    <div>
+                        <h3>O pedido de informações</h3>
+                        <p>
+                            Antes de fornecer dados, é importante perguntar por
+                            que aquela informação está sendo solicitada e para quem.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="evidence">
+                    <span>04</span>
+                    <div>
+                        <h3>A origem da oferta</h3>
+                        <p>
+                            Uma página parecer profissional não significa que a
+                            oportunidade seja verdadeira. Verifique a fonte e o endereço.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="lesson-block">
+            <div class="section-kicker">🛡️ ANTES DE CLICAR</div>
+            <h2>Faça uma pausa de alguns segundos.</h2>
+
+            <ul class="protection-list">
+                <li>Confira quem publicou ou enviou a oferta;</li>
+                <li>Procure a oferta diretamente no site ou canal oficial;</li>
+                <li>Desconfie de benefícios que parecem bons demais ou surgem sem contexto;</li>
+                <li>Não forneça senhas ou outros dados sensíveis para “liberar” uma vantagem.</li>
+            </ul>
+        </section>
+
+        <section class="survey-block">
+            <div class="section-kicker">📊 AGORA É COM VOCÊ</div>
+            <h2>Queremos saber como a oferta pareceu.</h2>
+
+            <p>
+                Sua resposta ajuda a equipe a investigar a influência do
+                cotidiano e da promessa de benefício na credibilidade da oferta.
+            </p>
+
+            <label for="credibility">Antes da revelação, quão confiável a oferta parecia?</label>
+
+            <select id="credibility">
+                <option value="">Selecione uma opção</option>
+                <option>1 — Nada confiável</option>
+                <option>2 — Pouco confiável</option>
+                <option>3 — Mais ou menos confiável</option>
+                <option>4 — Confiável</option>
+                <option>5 — Muito confiável</option>
+            </select>
+
+            <label>O que mais chamou sua atenção?</label>
+
+            <div class="choice-grid">
+                <button type="button" onclick="selectChoice(this)">🎁 A gratuidade</button>
+                <button type="button" onclick="selectChoice(this)">📚 O contexto de estudos</button>
+                <button type="button" onclick="selectChoice(this)">👀 A aparência do site</button>
+                <button type="button" onclick="selectChoice(this)">📝 A promessa de conteúdo</button>
+            </div>
+
+            <button class="main-cta survey-button" onclick="finishSurvey()">
+                Enviar resposta
+            </button>
+
+            <p id="surveyMessage" class="survey-message" aria-live="polite"></p>
+        </section>
+
+        <section class="share-block">
+            <h2>🛡️ Não deixe seu amigo cair também.</h2>
+            <p>
+                Compartilhe o projeto e ajude outras pessoas a reconhecer sinais de phishing.
+            </p>
+
+            <button class="light-button full-button" onclick="shareProject()">
+                Compartilhar projeto
+            </button>
+        </section>
+
+        <a class="home-link" href="index.html">Voltar ao início</a>
+    </main>
+
+    <script>
+        let selectedChoice = "";
+
+        function selectChoice(button) {
+            document.querySelectorAll(".choice-grid button").forEach(item => {
+                item.classList.remove("selected");
+            });
+
+            button.classList.add("selected");
+            selectedChoice = button.textContent.trim();
+        }
+
+        function finishSurvey() {
+            const credibility = document.getElementById("credibility").value;
+            const message = document.getElementById("surveyMessage");
+
+            if (!credibility || !selectedChoice) {
+                message.textContent = "Selecione uma nota e uma opção antes de enviar.";
+                return;
+            }
+
+            /*
+             * SIMULAÇÃO EDUCATIVA:
+             * A resposta abaixo é apenas exibida localmente.
+             * Nenhuma resposta é enviada ou armazenada pelo site.
+             */
+            message.textContent =
+                "Resposta registrada apenas nesta tela para fins de demonstração. Obrigado!";
+        }
+
+        function shareProject() {
+            const link = new URL("index.html", window.location.href).href;
+
+            if (navigator.share) {
+                navigator.share({
+                    title: "Você Cairia? — Simulação de phishing",
+                    text: "Teste educativo sobre phishing.",
+                    url: link
+                }).catch(() => {});
+                return;
+            }
+
+            const campo = document.createElement("textarea");
+            campo.value = link;
+            campo.style.position = "fixed";
+            campo.style.left = "-9999px";
+            document.body.appendChild(campo);
+            campo.focus();
+            campo.select();
+
+            try {
+                const copiado = document.execCommand("copy");
+                document.body.removeChild(campo);
+
+                if (copiado) {
+                    alert("🔗 Link do projeto copiado!\n\nAgora é só mandar para seu amigo.");
+                } else {
+                    mostrarLink(link);
+                }
+            } catch (error) {
+                document.body.removeChild(campo);
+                mostrarLink(link);
+            }
+        }
+
+        function mostrarLink(link) {
+            alert("Copie este link para compartilhar o projeto:\n\n" + link);
+        }
+    </script>
+</body>
+</html>

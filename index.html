@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Aprova+ ENEM — Preparação gratuita">
+    <meta property="og:description" content="Aulas, materiais e simulados para sua preparação para o ENEM.">
+    <meta property="og:type" content="website">
+    <title>Aprova+ ENEM — Preparação gratuita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="landing-page">
+
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Aprova+ ENEM">
+            <span class="brand-mark">+</span>
+            <span>
+                <strong>Aprova+</strong>
+                <small>ENEM 2026</small>
+            </span>
+        </a>
+
+        <nav class="top-nav" aria-label="Navegação">
+            <a href="#beneficios">O preparatório</a>
+            <a href="#materiais">Materiais</a>
+            <button class="header-button" onclick="openOpportunity()">Começar grátis</button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="shape shape-blue"></div>
+            <div class="shape shape-yellow"></div>
+            <div class="shape shape-orange"></div>
+            <div class="shape shape-green"></div>
+
+            <div class="hero-copy">
+                <span class="eyebrow">PREPARAÇÃO GRATUITA • ENEM 2026</span>
+
+                <h1>
+                    Seu próximo passo
+                    <span>começa aqui.</span>
+                </h1>
+
+                <p>
+                    Aulas, materiais e simulados para você se preparar
+                    para o ENEM de um jeito simples, online e gratuito.
+                </p>
+
+                <div class="hero-actions">
+                    <button class="main-cta" onclick="openOpportunity()">
+                        Quero começar grátis
+                    </button>
+                    <span class="microcopy">✓ Sem custo &nbsp; ✓ Online &nbsp; ✓ Acesso rápido</span>
+                </div>
+            </div>
+
+            <div class="hero-card" aria-label="Destaque do preparatório">
+                <div class="card-sticker">ENEM<br>2026</div>
+                <div class="book-illustration">
+                    <div class="book">
+                        <span>REDAÇÃO</span>
+                        <strong>1000</strong>
+                    </div>
+                    <div class="pencil"></div>
+                    <div class="paper-note">
+                        <b>+</b>
+                        <span>simulados</span>
+                    </div>
+                </div>
+                <div class="hero-card-text">
+                    <small>COMECE HOJE</small>
+                    <strong>Conteúdo para sua preparação</strong>
+                    <span>Estude no seu ritmo.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="beneficios" class="benefits-section">
+            <div class="section-heading">
+                <span class="eyebrow">TUDO EM UM SÓ LUGAR</span>
+                <h2>Prepare-se para o ENEM.</h2>
+                <p>Um espaço pensado para quem quer estudar sem complicação.</p>
+            </div>
+
+            <div class="benefit-grid">
+                <article class="benefit-card">
+                    <span class="benefit-icon">📚</span>
+                    <h3>Aulas preparatórias</h3>
+                    <p>Conteúdos organizados para revisar os principais assuntos.</p>
+                </article>
+
+                <article class="benefit-card">
+                    <span class="benefit-icon">📝</span>
+                    <h3>Simulados</h3>
+                    <p>Pratique seus conhecimentos e acompanhe seu desempenho.</p>
+                </article>
+
+                <article class="benefit-card">
+                    <span class="benefit-icon">🎯</span>
+                    <h3>Estratégias</h3>
+                    <p>Dicas para organizar sua rotina e aproveitar melhor os estudos.</p>
+                </article>
+
+                <article class="benefit-card">
+                    <span class="benefit-icon">📖</span>
+                    <h3>Materiais de apoio</h3>
+                    <p>Resumos e materiais para complementar sua preparação.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="materiais" class="mid-banner">
+            <div>
+                <span class="eyebrow">ACESSO GRATUITO</span>
+                <h2>Comece sua preparação sem pagar nada.</h2>
+                <p>Seu estudo pode começar com poucos cliques.</p>
+            </div>
+            <button class="light-button" onclick="openOpportunity()">Quero participar</button>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <strong>Aprova+ ENEM</strong>
+        <span>Preparação educacional • Projeto Você Cairia?</span>
+    </footer>
+
+    <div id="opportunity" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeOpportunity()" aria-label="Fechar">×</button>
+
+            <span class="eyebrow">VAGAS ABERTAS</span>
+            <h2 id="modal-title">Seu acesso gratuito está a poucos passos.</h2>
+
+            <p>
+                Participe do preparatório e tenha acesso a aulas,
+                materiais e simulados para sua preparação.
+            </p>
+
+            <div class="opportunity-points">
+                <div><strong>01</strong><span>Aulas e conteúdos de revisão</span></div>
+                <div><strong>02</strong><span>Materiais para estudar online</span></div>
+                <div><strong>03</strong><span>Simulados para praticar</span></div>
+            </div>
+
+            <button class="main-cta full-button" onclick="goToSignup()">
+                Liberar meu acesso
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function openOpportunity() {
+            document.getElementById("opportunity").classList.remove("hidden");
+            document.body.classList.add("modal-open");
+        }
+
+        function closeOpportunity() {
+            document.getElementById("opportunity").classList.add("hidden");
+            document.body.classList.remove("modal-open");
+        }
+
+        function goToSignup() {
+            window.location.href = "login.html";
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") closeOpportunity();
+        });
+    </script>
+</body>
+</html>

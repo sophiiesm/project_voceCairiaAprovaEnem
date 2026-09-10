@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprova+ ENEM — Inscrição</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="signup-page">
+
+    <header class="site-header compact-header">
+        <a class="brand" href="index.html" aria-label="Aprova+ ENEM">
+            <span class="brand-mark">+</span>
+            <span>
+                <strong>Aprova+</strong>
+                <small>ENEM 2026</small>
+            </span>
+        </a>
+
+        <span class="secure-label">Inscrição gratuita</span>
+    </header>
+
+    <main class="signup-main">
+        <section class="signup-card">
+            <div class="signup-badge">ENEM<br>2026</div>
+
+            <span class="eyebrow">ÚLTIMA ETAPA</span>
+            <h1>Crie seu acesso gratuito</h1>
+            <p class="signup-subtitle">
+                Informe seus dados básicos para continuar para o preparatório.
+            </p>
+
+            <form id="signupForm">
+                <label for="name">Nome</label>
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Digite seu nome"
+                    autocomplete="off"
+                    required
+                >
+
+                <label for="email">E-mail</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="off"
+                    required
+                >
+
+                <button class="main-cta full-button" type="submit">
+                    Continuar
+                </button>
+            </form>
+
+            <div class="privacy-note">
+                <span>✓</span>
+                <p>Esta página faz parte de uma atividade educacional. Os dados digitados não são lidos, armazenados ou enviados.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const form = document.getElementById("signupForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            /*
+             * SIMULAÇÃO EDUCATIVA:
+             * Os valores dos campos não são lidos, armazenados,
+             * enviados para servidor ou usados para autenticação.
+             */
+            window.location.href = "resultado.html";
+        });
+    </script>
+</body>
+</html>
