@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Você Cairia? — Resultado</title>
+    <title>Você Cairia? SIM CAIU KAKAKA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,14 +13,14 @@
     <main class="result-container">
 
         <section class="reveal">
-            <span class="reveal-stamp">SIMULAÇÃO</span>
+            <h1>🚨💥BETINHA!! VOCÊ CAIU NUM GOLPE E FOI MOGADO!!💥</h1>
 
-            <h1>🚨 Você caiu em um golpe.</h1>
-
-            <p class="reveal-subtitle">
-                Calma! Esta foi uma simulação educativa de phishing.
-                Nenhuma informação digitada foi armazenada ou enviada.
-            </p>
+            <div class="reveal-subtitle-bg">
+                <p class="reveal-subtitle">
+                    Calma aí paizão, esta foi somente uma simulação de phishing (golpe).
+                    Nenhuma informação digitada foi armazenada ou enviada, viu?
+                </p>
+            </div>
 
             <div class="project-info">
                 <strong>Projeto Você Cairia?</strong>
@@ -152,14 +153,10 @@
         </section>
 
         <section class="share-block">
-            <h2>🛡️ Não deixe seu amigo cair também.</h2>
+            <h2>Hey, não deixe seu amigo cair também.</h2>
             <p>
-                Compartilhe o projeto e ajude outras pessoas a reconhecer sinais de phishing.
+                Compartilhe o QRCode do projeto e ajude outras pessoas a reconhecer sinais de phishing.
             </p>
-
-            <button class="light-button full-button" onclick="shareProject()">
-                Compartilhar projeto
-            </button>
         </section>
 
         <a class="home-link" href="index.html">Voltar ao início</a>
@@ -194,45 +191,13 @@
             message.textContent =
                 "Resposta registrada apenas nesta tela para fins de demonstração. Obrigado!";
         }
-
-        function shareProject() {
-            const link = new URL("index.html", window.location.href).href;
-
-            if (navigator.share) {
-                navigator.share({
-                    title: "Você Cairia? — Simulação de phishing",
-                    text: "Teste educativo sobre phishing.",
-                    url: link
-                }).catch(() => {});
-                return;
-            }
-
-            const campo = document.createElement("textarea");
-            campo.value = link;
-            campo.style.position = "fixed";
-            campo.style.left = "-9999px";
-            document.body.appendChild(campo);
-            campo.focus();
-            campo.select();
-
-            try {
-                const copiado = document.execCommand("copy");
-                document.body.removeChild(campo);
-
-                if (copiado) {
-                    alert("🔗 Link do projeto copiado!\n\nAgora é só mandar para seu amigo.");
-                } else {
-                    mostrarLink(link);
-                }
-            } catch (error) {
-                document.body.removeChild(campo);
-                mostrarLink(link);
-            }
-        }
-
-        function mostrarLink(link) {
-            alert("Copie este link para compartilhar o projeto:\n\n" + link);
-        }
     </script>
+
+    <footer class="site-footer">
+        <strong>Aprova+ ENEM</strong>
+        <span>&copy;2026 Equipe - ??</span>
+    </footer>
+
 </body>
+
 </html>
