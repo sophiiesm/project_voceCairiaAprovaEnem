@@ -1118,3 +1118,28 @@ input::placeholder {
         font-size: 11px;
     }
 }
+
+.video-reveal {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 25px;
+    text-align: center;
+}
+
+.video-reveal h2 {
+    margin-bottom: 20px;
+}
+
+.video-reveal video {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 14px;
+}
+
+.video-reveal p {
+    margin-top: 18px;
+    line-height: 1.6;
+}
